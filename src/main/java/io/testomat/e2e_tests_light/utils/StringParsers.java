@@ -1,10 +1,7 @@
 package io.testomat.e2e_tests_light.utils;
 
-import org.jetbrains.annotations.NotNull;
-
 public class StringParsers {
 
-    @NotNull
     public static Integer parseIntegerFromString(String targetText) {
         String digitText = targetText.replaceAll("\\D+", "");
         return Integer.parseInt(digitText);
