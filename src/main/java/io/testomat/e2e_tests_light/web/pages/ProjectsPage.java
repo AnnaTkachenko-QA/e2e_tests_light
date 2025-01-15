@@ -21,12 +21,14 @@ public class ProjectsPage {
     }
 
     //pattern loadable component
-    public void isLoaded() {
+    public ProjectsPage isLoaded() {
         searchInput.shouldBe(visible);
+        return this;
     }
 
-    public void searchForProject(String targetProjectName) {
+    public ProjectsPage searchForProject(String targetProjectName) {
         searchInput.setValue(targetProjectName);
+        return this;
     }
 
     public void selectProject(String targetProjectName) {
@@ -56,4 +58,6 @@ public class ProjectsPage {
     public static String getTotalCountOfProjects() {
         return $("#container kbd").getText();
     }
+
+
 }
