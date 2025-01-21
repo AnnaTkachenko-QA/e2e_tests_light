@@ -1,10 +1,13 @@
 package io.testomat.e2e_tests_light;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.junit5.TextReportExtension;
 import io.github.cdimascio.dotenv.Dotenv;
 import io.testomat.e2e_tests_light.common.Application;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+@ExtendWith(TextReportExtension.class)
 public class BaseTest {
 
     protected static Dotenv env = Dotenv.load();
